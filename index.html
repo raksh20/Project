@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>ASTRONOMY AND SPACE QUIZ</title>
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+	<div id="navbar" class="sidenav hide">
+		<p id="navmsg">Click on the question to check whether you have answered or not</p>
+  <button type="button" id="quesnav1" class=" quesnav" onclick="navigation(1,this.id); navReset();">Question 1</button>
+  <button type="button" id="quesnav2" class=" quesnav" onclick="navigation(2,this.id); navReset();">Question 2</button>
+  <button type="button" id="quesnav3" class=" quesnav" onclick="navigation(3,this.id); navReset();">Question 3</button>
+  <button type="button" id="quesnav4" class=" quesnav" onclick="navigation(4,this.id); navReset();">Question 4</button>
+  <button type="button" id="quesnav5" class=" quesnav" onclick="navigation(5,this.id); navReset();">Question 5</button>
+  <button type="button" id="quesnav6" class=" quesnav" onclick="navigation(6,this.id); navReset();">Question 6</button>
+  <button type="button" id="quesnav7" class=" quesnav" onclick="navigation(7,this.id); navReset();">Question 7</button>
+  <button type="button" id="quesnav8" class=" quesnav" onclick="navigation(8,this.id); navReset();">Question 8</button>
+  <button type="button" id="quesnav9" class=" quesnav" onclick="navigation(9,this.id); navReset();">Question 9</button>
+  <button type="button" id="quesnav10" class=" quesnav" onclick="navigation(10,this.id); navReset();">Question 10</button>
+</div>
+<div id="scoreContainer" class="highscore hide">
+	<p id="info">HIGH SCORE</p>
+	<p id="dispName"></p>
+	<p id="dispScore"></p>
+	<p id="dispDate"></p>
+	<p id="dispTime"></p>
+</div>
+	<div id="name">
+		ENTER NAME:<input type="text" name="username" id="myname">
+	</div>
+
+	<div id="quiz-container" class="slides">
+
+		<h1 id="heading">ASTRONOMY AND SPACE QUIZ</h1>
+		<div id="timer" class="countdown hide">
+			<span id="time">Time left</span>
+			<span>:</span>
+			<span id="count">300</span>
+		</div>
+		<div id="quiz" class="hide" >
+		<p id="ques">
+		</p>
+		<div class="options">
+			<button type="button" id="1" class="1">ans1</button>
+			<button type="button" id="2" class="2">ans2</button>
+			<button type="button" id="3" class="3">ans3</button>
+			<button type="button" id="4" class="4">ans4</button>
+
+		</div>
+
+	</div>
+	<button type="button" id="restart" class="hide" onclick="window.location.reload();">RESTART QUIZ</button>
+	<p id=ans class="hide"></p>
+	<p id="result" class="hide"></p>
+	<div id="buttons">
+	<button type="button" id="start" class="btn btn-light" onclick="countDown();">START</button>
+	<button type="button" id="prev" class="hide" onclick="clickPrev(); prevQuestion();">PREVIOUS</button>
+	<button type="button" id="next" class="hide">NEXT</button>
+	<button type="button" id="submit" class="hide" onclick="clickSubmit(); myStop();">SUBMIT</button>
+</div>
+	
+
+
+	<script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
